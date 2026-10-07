@@ -1,4 +1,4 @@
-from board import initial_board, move_piece, SIZE
+from board import initial_board, move_piece, capture_piece, SIZE
 from rules import simple_move, capture_move, promote
 
 
