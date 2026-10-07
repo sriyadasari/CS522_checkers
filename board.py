@@ -17,3 +17,10 @@ def initial_board():
 def move_piece(board, start, end):
     board[end[0]][end[1]] = board[start[0]][start[1]]
     board[start[0]][start[1]] = "."
+
+def capture_piece(board, start, end):
+    """Move a piece two squares and remove the piece it jumped over."""
+    mid_r = (start[0] + end[0]) // 2
+    mid_c = (start[1] + end[1]) // 2
+    board[mid_r][mid_c] = "."      # remove the jumped piece
+    move_piece(board, start, end)  # move the jumping piece to its landing square
